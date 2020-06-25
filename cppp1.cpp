@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string.h>
 #include <cstdlib>
+#include<ios>  //used for getting stream size
+#include<limits>
 using namespace std;
 static int p = 0;
 class a
@@ -26,7 +28,8 @@ void a::install()
   cout<<"Enter bus no: ";
   cin>>bus[p].busn;
   cout<<"\nEnter Driver's name: ";
-  cin>>bus[p].driver;
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  cin.getline(bus[p].driver,100);
   cout<<"\nArrival time: ";
   cin>>bus[p].arrival;
   cout<<"\nDeparture: ";
