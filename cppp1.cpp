@@ -63,7 +63,7 @@ void a::allotment()
     {
     if (strcmp(bus[n].seat[seat/4][(seat%4)-1], "Empty")==0)
       {
-        cout<<"Enter passanger's name: ";
+        cout<<"Enter passenger's name: ";
         cin>>bus[n].seat[seat/4][(seat%4)-1];
         break;
       }
